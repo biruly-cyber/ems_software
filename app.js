@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 
 // static file 
-app.use(express.static(path.join(__dirname, "../client/build")))
+app.use(express.static(path.join(__dirname, "./client/build")))
 
 
 // middleware for recieve request from other device
@@ -78,7 +78,7 @@ app.use("/api/v1/taskReportFeedback", taskReportFeedbackRoutes)
 
 //default route
 app.get("*", (req, res)=>{
-  res.sendFile(path.join(__dirname, "../clinet/build/index.html"))
+  res.sendFile(path.join(__dirname, "./clinet/build/index.html"))
 })
 
 app.get("/", (req, res) => {
