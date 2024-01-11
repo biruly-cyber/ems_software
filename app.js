@@ -12,7 +12,11 @@ import reportProjectRoutes from "./routes/ReportProjectRoutes.js"
 import reportTaskRoutes  from "./routes/ReportTaskRoutes.js"
 import taskReportFeedbackRoutes from "./routes/TaskReportFeedback.js"
 import applyLeavesRoutes from "./routes/LeaveDetailsRoutes.js"
-import path from "path" 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export const app = express();
 
@@ -27,7 +31,7 @@ app.use(cookieParser());
 
 
 // static file 
-app.use(express.static(path.join(__dirname, "./client/build")))
+app.use(express.static(path.join(__dirname, './client/build')));
 
 
 // middleware for recieve request from other device
