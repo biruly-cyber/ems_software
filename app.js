@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, './client/build')));
 
 // Allow requests only from http://192.168.1.8:3000
 const corsOptions = {
-  origin: "http://192.168.1.51:3000",
+  origin: "https://ems-4lks.onrender.com",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
